@@ -78,7 +78,7 @@
 Скачал torch и mlagent, запустил обучение в консоли увидел считывание файла
 ![Screenshot_2](https://user-images.githubusercontent.com/49115035/205266649-792d4fe0-3c27-4141-b9c6-6dfeba3a51d7.png)
 
-После обучения запустил twnsorboard
+После обучения запустил tensorboard
 ![Screenshot_3](https://user-images.githubusercontent.com/49115035/205269251-214dd1dd-d43f-4ac1-948b-5904fa06955e.png)
 
 Начал редактирование Economic.yaml файла 5 раз.
@@ -87,12 +87,22 @@
 ![Screenshot_4](https://user-images.githubusercontent.com/49115035/205270647-dadb5159-2415-4f13-96e5-33c5e868fa68.png)
 Из-за этого график стал прямым и равнялся единице.
 
-
 2. После этого сменил ```batch_size: 2500``` на ```batch_size: 512``` 
+![Screenshot_5](https://user-images.githubusercontent.com/49115035/205272134-803013d9-d440-4db6-acab-34825cf2ae7f.png)
+график перестал быть прямым и стал возрастающим
 
+3. После этого осатвил прошлые настройки и сменил ```lambd: 0.95``` на ```lambd: 0.85```
+![Screenshot_6](https://user-images.githubusercontent.com/49115035/205274474-18012a09-96c7-4c51-8786-157800ea786d.png)
+График почти не изменился, но стал чуть более изогнутым
 
+4. После этого сменил ```num_epoch: 3``` на ```num_epoch: 1```
+![Screenshot_7](https://user-images.githubusercontent.com/49115035/205276334-aade0aaa-8035-4aeb-9804-6c84fe822369.png)
 
+Это оказалось плохой идеей, и график пошел вниз из-за нехватки эпох
 
+5.Затем верунл ```num_epoch: 3``` и поменял ```epsilon: 0.2``` на ```epsilon: 0.1```
+![Screenshot_8](https://user-images.githubusercontent.com/49115035/205277720-e998002c-4bf7-4974-a86c-3de713f7bbcd.png)
+График упал, но затем начал расти обратно
 
 
 ## Задание 2
